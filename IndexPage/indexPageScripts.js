@@ -9,7 +9,7 @@ let movies = {
     const data = await response.json(); //get the data from request
 
     // !fetch end
-    const mostPopularMovie = data.results[0];
+    const mostPopularMovie = data.results[3];
     const headBanner = document.querySelector('.banner');
     headBanner.src = `https://image.tmdb.org/t/p/original${mostPopularMovie.backdrop_path}`;
     const bannerInfo = document.querySelector(".bannerInfo");
