@@ -263,7 +263,14 @@ ul li {
 
 
 @media screen and (max-width:768px) {
+    body {
+        grid-template-columns: 3em 1fr !important;
+        justify-content: flex-start !important;
+    }
 
+    .sidebarContent {
+        left: -4px;
+    }
     .search {
         width: 60%;
     }
