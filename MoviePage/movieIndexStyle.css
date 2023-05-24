@@ -1,0 +1,90 @@
+ .moviePageContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   padding: 2em;
+   height: 100%;
+
+ }
+
+ .moviePageContent {
+   color: #fff;
+   width: 80%;
+   height: 100%;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-template-rows: 1fr 400px;
+   grid-template-columns: 1fr 1fr;
+   gap: 2em;
+   padding: .4em;
+   box-shadow: 0 0 10px 2px rgba(2, 217, 255, 0.126);
+
+ }
+
+ .moviePoster {
+   max-height: 600px;
+   width: 100%;
+   height: 100%;
+   margin: auto;
+ }
+
+ .moviePoster img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+ }
+
+ .movieList::-webkit-scrollbar {
+   display: none;
+ }
+
+ .moviesContainer {
+   gap: 1rem;
+   display: flex;
+   flex-direction: column;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   width: 100%;
+   padding: 2em;
+   margin-top: 5em;
+ }
+
+ .currentMovieTitle {
+   color: rgba(2, 217, 255, 0.726);
+   padding: 1em 0;
+
+ }
+
+ .currentMovieDescription {
+   width: 80%;
+ }
+
+ .currentMovieRate {
+   width: max-content;
+   margin-bottom: 1em;
+ }
+
+
+
+ @media screen and (max-width:768px) {
+   .moviePageContent {
+     width: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     margin-left: 3.5em;
+   }
+
+   .currentMovieRate {
+     margin: 2em auto;
+
+   }
+
+   .currentMovieDescription {
+     text-align: center;
+     margin: auto;
+   }
+ }

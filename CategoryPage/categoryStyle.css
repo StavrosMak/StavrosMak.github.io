@@ -1,0 +1,97 @@
+/* !header - searchbar */
+.header {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* !About Main */
+.mainContainer {
+  grid-column: 2/3;
+  background-color: black;
+  display: grid;
+  grid-template-rows: 80px auto;
+}
+.mainContent {
+  padding: 0 2em;
+  background-color: black;
+  border-left: 1px solid rgba(2, 217, 255, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+.categoryHeader {
+  color: rgba(2, 217, 255, 0.726);
+  border-bottom: 5px solid rgba(2, 217, 255, 0.726);
+  display: flex;
+  margin-bottom: 2em;
+  padding: .4em;
+  text-align: center;
+}
+
+.movieList { /*overwrite the shared movieListStyle. */
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, 200px) !important;
+  justify-content: center !important;
+  grid-template-rows: auto !important;
+  gap: 1.2em !important;
+}
+
+
+/* !About pages */
+
+.pageContainer {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1em;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 2rem;
+  padding: 0 2em;
+}
+
+.pageContainer a {
+  height: 100%;
+  text-decoration: none;
+  color: rgba(2, 217, 255, 0.526);
+}
+
+.resultContainer{
+  top: 73px !important;
+}
+
+#currentPage {
+  color: rgba(2, 217, 255, 0.526);
+  border-bottom: 2px solid rgba(2, 217, 255, 0.726);
+  font-size: 1em;
+}
+
+.search {
+  margin-top: 3em !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .pageContainer {
+    font-size: 0.9em;
+    padding-bottom: 0.5em;
+  }
+
+}
