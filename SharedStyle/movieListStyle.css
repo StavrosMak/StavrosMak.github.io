@@ -34,8 +34,8 @@
 
 .prvBtn img,
 .nxtBtn img {
-    min-width: 30px;
-    min-height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 
