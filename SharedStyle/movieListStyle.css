@@ -34,8 +34,10 @@
 
 .prvBtn img,
 .nxtBtn img {
-    width: 30px;
+    min-width: 30px;
+    min-height: 30px;
 }
+
 
 .prvBtn:hover,
 .nxtBtn:hover {
