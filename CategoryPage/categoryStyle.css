@@ -32,12 +32,13 @@
   text-align: center;
 }
 
-.movieList { /*overwrite the shared movieListStyle. */
+.movieList {  /*overwrite the shared movieListStyle. */
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, 200px) !important;
-  justify-content: center !important;
+   grid-template-columns: repeat(auto-fill, 200px) !important;
+  justify-content: space-evenly !important;
   grid-template-rows: auto !important;
-  gap: 1.2em !important;
+  /*gap: 1.2em !important;*/
+  gap: 5em !important;
 }
 
 
