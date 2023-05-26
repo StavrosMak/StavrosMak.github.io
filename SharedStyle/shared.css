@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
     /* position & size */
     position: relative;
     width: 100%;
-    top: 10%;
+    top: 100px;
 }
 
 .sidebarItem {
