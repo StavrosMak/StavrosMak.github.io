@@ -122,7 +122,8 @@ body::-webkit-scrollbar {
 }
 
 .svgIcon {
-    max-width: 35px;
+    width: 35px;
+    height: 35px;
 }
 
 
@@ -257,8 +258,13 @@ ul li {
 }
 
 .svgIcon {
-    min-width: 35px;
-    min-height: 35px;
+    width: 35px;
+    height: 35px;
+}
+
+.categories img{
+    width: 20px;
+    height: 20px;
 }
 
 
