@@ -252,13 +252,26 @@ ul li {
 }
 
 
+.resultItem:hover {
+    cursor: pointer;
+}
+
+.svgIcon {
+    width: 35px;
+    height: 35px;
+}
+
+
 .search img {
     width: 20px;
+    height: 20px;
     margin-right: .4em;
 }
 
-.resultItem:hover {
-    cursor: pointer;
+
+.dropdown img {
+    width: 20px;
+    padding-left: .2em;
 }
 
 
