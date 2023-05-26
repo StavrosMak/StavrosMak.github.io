@@ -280,8 +280,7 @@ ul li {
         width: 60%;
     }
 
-
-    .resultItem{
+ .resultItem{
         gap: 0.3em;
     }
 
@@ -291,6 +290,7 @@ ul li {
         min-height: 17vw;
         max-width: 17vw;
         min-width: 17vw;
+
     }
 
 
