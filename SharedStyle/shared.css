@@ -257,14 +257,14 @@ ul li {
 }
 
 .svgIcon {
-    width: 35px;
-    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
 }
 
 
 .search img {
-    width: 20px;
-    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     margin-right: .4em;
 }
 
