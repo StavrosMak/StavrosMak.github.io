@@ -29,7 +29,6 @@
   object-fit: cover;
   position: relative;
   overflow: hidden;
-  border-bottom: 10px solid red;
 }
 
 .bannerInfo {
