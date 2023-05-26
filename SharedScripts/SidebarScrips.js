@@ -118,7 +118,12 @@ function toggleSidebar() {
         document.querySelector(".sidebar").style.width = "15em";
         isSidebarMinimized = false;
     } else {
-        document.querySelector(".sidebar").style.width = "2.5em";
+
+        if (isTouchDevice) {
+            document.querySelector(".sidebar").style.width = "2.5em";
+        } else {
+            document.querySelector(".sidebar").style.width = "3.5em";
+        }
         isSidebarMinimized = true;
     }
 }
