@@ -9,7 +9,7 @@ let movies = {
     const data = await response.json(); //get the data from request
 
     // !fetch end
-    const mostPopularMovie = data.results[5];
+    const mostPopularMovie = data.results[3];
     const headBanner = document.querySelector('.banner');
     headBanner.src = `https://image.tmdb.org/t/p/original${mostPopularMovie.backdrop_path}`;
     const bannerInfo = document.querySelector(".bannerInfo");
@@ -30,13 +30,14 @@ let movies = {
 
 function init() {
 
-  mainContainer=document.querySelector('.mainContainer');
+  mainContainer = document.querySelector('.mainContainer');
 
   const header = document.createElement('div');
   header.className = 'header';
 
   const bannerImg = document.createElement('img');
   bannerImg.src = '';
+
   bannerImg.alt = '';
   bannerImg.className = 'banner';
 
