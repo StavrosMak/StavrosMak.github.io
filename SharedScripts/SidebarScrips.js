@@ -83,7 +83,14 @@ const dropdownLinks = document.querySelector(".dropdown-links");
 
 
 function init() {
-    sidebar.style.width='2.5em'; //always closes
+
+    if(isTouchDevice){
+        sidebar.style.width = '2.5em'; //always closes
+
+    }else{
+            sidebar.style.width = '3.5em'; //always closes
+
+    }
     dropdownLinks.style.right = "-1000%"; //always closed.
     isDropdownHidden = true;
     isSidebarMinimized = true;
