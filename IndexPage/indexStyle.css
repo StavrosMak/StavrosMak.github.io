@@ -22,6 +22,10 @@
   overflow: hidden;
 }
 
+.header img {
+  max-width: 2500px;
+}
+
 .banner {
   width: 100%;
   max-height: 70vh;
@@ -95,6 +99,7 @@
 }
 
 .moviesContainer {
+  width: calc(100vw - 15em);
   display: flex;
   flex-direction: column;
   gap: 1rem;
