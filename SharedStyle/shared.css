@@ -264,12 +264,12 @@ ul li {
 
 @media screen and (max-width:768px) {
     body {
-        grid-template-columns: 3em 1fr !important;
+        grid-template-columns: 2.5em 1fr !important;
         justify-content: flex-start !important;
     }
 
     .sidebarContent {
-        left: -4px;
+        left: -15px;
     }
     .search {
         width: 60%;
