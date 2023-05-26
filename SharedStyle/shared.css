@@ -267,10 +267,9 @@ ul li {
     height: 20px;
 }
 
-
 .search img {
-    min-width: 20px;
-    min-height: 20px;
+    width: 20px;
+    height: 20px;
     margin-right: .4em;
 }
 
