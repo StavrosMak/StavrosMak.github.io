@@ -83,7 +83,7 @@ const dropdownLinks = document.querySelector(".dropdown-links");
 
 
 function init() {
-    sidebar.style.width='3.5em'; //always closes
+    sidebar.style.width='2.5em'; //always closes
     dropdownLinks.style.right = "-1000%"; //always closed.
     isDropdownHidden = true;
     isSidebarMinimized = true;
@@ -111,7 +111,7 @@ function toggleSidebar() {
         document.querySelector(".sidebar").style.width = "15em";
         isSidebarMinimized = false;
     } else {
-        document.querySelector(".sidebar").style.width = "3.5em";
+        document.querySelector(".sidebar").style.width = "2.5em";
         isSidebarMinimized = true;
     }
 }
