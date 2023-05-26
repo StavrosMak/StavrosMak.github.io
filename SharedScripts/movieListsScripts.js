@@ -135,16 +135,17 @@ function handleMovieCardInteraction(parentContainer) {
     }
 
     function handleInteraction(event) {
-
       const movieCard = event.target.closest('.movieCard');
       if (movieCard) {
         const cardTextContent = movieCard.querySelector('.card-textContent');
-        if (cardTextContent) {
+        const movieDesc = movieCard.querySelector('.movieDesc');
+
+        if (cardTextContent ) {
           if (event.type === 'mouseover' || !isMovieCardOpen) {
             cardTextContent.style.bottom = '0';
             cardTextContent.style.transition = '1s';
             isMovieCardOpen = true;
-          } else if (event.type === 'mouseout' || isMovieCardOpen) {
+          } else if (event.type === 'mouseout' || isMovieCardOpen && movieDesc !== event.target) {
             cardTextContent.style.bottom = '';
             isMovieCardOpen = false;
           }
