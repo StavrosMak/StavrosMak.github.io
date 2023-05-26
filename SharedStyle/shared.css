@@ -281,11 +281,18 @@ ul li {
     }
 
 
-    .resultImg {
-        width: 100%;
-        height: auto;
-
+    .resultItem{
+        gap: 0.3em;
     }
+
+
+    .resultImg {
+        max-height: 17vw;
+        min-height: 17vw;
+        max-width: 17vw;
+        min-width: 17vw;
+    }
+
 
 
 }
