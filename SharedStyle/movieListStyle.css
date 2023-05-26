@@ -28,8 +28,8 @@
     position: relative;
     top: -20em;
     z-index: 2;
-    height: 7em;
-    width: 30px;
+    min-height: 7em;
+    min-width: 30px;
 }
 
 .prvBtn img,
