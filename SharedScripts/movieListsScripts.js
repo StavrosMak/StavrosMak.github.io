@@ -25,12 +25,13 @@ function createMovieList(parentContainer, title, movieListClass) {
   prvBtn.classList.add('prvBtn');
   const prvBtnImg = document.createElement('img');
   prvBtnImg.src = "../images/back-light-svgrepo-com.svg";
+  prvBtnImg.loading='lazy';
 
   const nxtBtnImg = document.createElement('img');
   const nxtBtn = document.createElement('button');
   nxtBtn.classList.add('nxtBtn');
   nxtBtnImg.src = "../images/back-light-svgrepo-com.svg";
-
+  nxtBtnImg.loading='lazy';
 
   const mainContent = document.querySelector(`.${parentContainer}`);
 
@@ -70,7 +71,6 @@ function handlePrevButtonClick(movieList, containerWidth) {
   movieList.scrollLeft -= containerWidth;
 }
 
-
 async function loadData(parentContainer, discoverURL) {
   // !fetch start
   const url = `${baseURL}${discoverURL}&${apikey}`;
@@ -86,11 +86,14 @@ async function loadData(parentContainer, discoverURL) {
       movieCard.classList.add("movieCard");
 
       const img = document.createElement('img');
+      img.loading = "lazy"; // Set the loading attribute to "lazy" for lazy loading
+      img.src = "../images/placeholder.png"; // Placeholder image source
+
       if (data.results[movie].poster_path) {
-        img.src = `https://image.tmdb.org/t/p/w500${data.results[movie].poster_path}`;
+        img.dataset.src = `https://image.tmdb.org/t/p/w500${data.results[movie].poster_path}`;
       } else {
         // Use a default image URL or local path
-        img.src = "../images/imageNotFound.png";
+        img.dataset.src = "../images/imageNotFound.png";
       }
 
       const movieTitle = document.createElement('a');
@@ -118,7 +121,23 @@ async function loadData(parentContainer, discoverURL) {
       movieList.appendChild(movieCard);
     }
   }
-};
+
+  // Intersection Observer to load actual images when they come into view
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target.querySelector('img');
+        img.src = img.dataset.src;
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  const movieCards = document.querySelectorAll('.movieCard');
+  movieCards.forEach((movieCard) => {
+    observer.observe(movieCard);
+  });
+}
 
 function handleMovieCardInteraction(parentContainer) {
   const movieCardParent2 = document.querySelectorAll(parentContainer);
@@ -135,17 +154,16 @@ function handleMovieCardInteraction(parentContainer) {
     }
 
     function handleInteraction(event) {
+
       const movieCard = event.target.closest('.movieCard');
       if (movieCard) {
         const cardTextContent = movieCard.querySelector('.card-textContent');
-        const movieDesc = movieCard.querySelector('.movieDesc');
-
-        if (cardTextContent ) {
+        if (cardTextContent) {
           if (event.type === 'mouseover' || !isMovieCardOpen) {
             cardTextContent.style.bottom = '0';
             cardTextContent.style.transition = '1s';
             isMovieCardOpen = true;
-          } else if (event.type === 'mouseout' || isMovieCardOpen && movieDesc !== event.target) {
+          } else if (event.type === 'mouseout' || isMovieCardOpen) {
             cardTextContent.style.bottom = '';
             isMovieCardOpen = false;
           }
