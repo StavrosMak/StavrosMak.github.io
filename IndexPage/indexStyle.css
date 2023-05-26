@@ -85,7 +85,6 @@
 .main_Content {
   display: flex;
   flex-direction: column;
-  padding: 5rem;
   width: calc(100vw - 15em);
   margin-top: 1em;
   min-height: 100vh;
