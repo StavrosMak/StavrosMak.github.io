@@ -158,10 +158,14 @@
   }
 
   .main_Content {
-    padding: 0;
+    padding: 1.5em;
+    width:100%
   }
 
   .movieCard {
     min-width: 70%;
+  }
+   .moviesContainer{
+     width: calc(100vw - 5em);
   }
 }
