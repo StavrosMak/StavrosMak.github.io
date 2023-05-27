@@ -154,8 +154,8 @@ function handleMovieCardInteraction(parentContainer) {
     }
 
     function handleInteraction(event) {
-
       const movieCard = event.target.closest('.movieCard');
+      const movieDesc = event.target.closest('.movieDesc');
       if (movieCard) {
         const cardTextContent = movieCard.querySelector('.card-textContent');
         if (cardTextContent) {
