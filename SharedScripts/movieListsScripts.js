@@ -163,7 +163,7 @@ function handleMovieCardInteraction(parentContainer) {
             cardTextContent.style.bottom = '0';
             cardTextContent.style.transition = '1s';
             isMovieCardOpen = true;
-          } else if (event.type === 'mouseout' || isMovieCardOpen) {
+          } else if (event.type === 'mouseout' || isMovieCardOpen && !movieDesc) {
             cardTextContent.style.bottom = '';
             isMovieCardOpen = false;
           }
