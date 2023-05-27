@@ -141,7 +141,8 @@ async function loadData(parentContainer, discoverURL) {
 
 function handleMovieCardInteraction(parentContainer) {
   const movieCardParent2 = document.querySelectorAll(parentContainer);
-  const isTouchDevice = 'ontouchstart' in window || (window.matchMedia('(max-width: 768px)').matches);
+  const isTouchDevice = (window.matchMedia('(max-width: 768px)').matches);
+//  const isTouchDevice = 'ontouchstart' in window || (window.matchMedia('(max-width: 768px)').matches);
 
   movieCardParent2.forEach(movieCardParent => {
     let isMovieCardOpen = false;
