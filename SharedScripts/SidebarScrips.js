@@ -85,7 +85,7 @@ const dropdownLinks = document.querySelector(".dropdown-links");
 function init() {
 
     if(isTouchDevice){
-        sidebar.style.width = '2.5em'; //always closes
+        sidebar.style.width = '2.8em'; //always closes
 
     }else{
             sidebar.style.width = '3.5em'; //always closes
@@ -120,7 +120,7 @@ function toggleSidebar() {
     } else {
 
         if (isTouchDevice) {
-            document.querySelector(".sidebar").style.width = "2.5em";
+            document.querySelector(".sidebar").style.width = "2.8em";
         } else {
             document.querySelector(".sidebar").style.width = "3.5em";
         }
