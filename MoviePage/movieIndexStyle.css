@@ -77,6 +77,9 @@
      text-align: center;
      margin-left: 3.5em;
    }
+  .moviePageContainer{
+    padding:0;
+  }
 
    .currentMovieRate {
      margin: 2em auto;
