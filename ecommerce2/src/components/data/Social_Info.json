@@ -1,0 +1,20 @@
+{
+    "social": [
+      {
+        "id":1,
+        "icon": "fa-brands fa-facebook",
+        "link": "https://www.facebook.com/"
+      },
+      {
+        "id":2,
+        "icon": "fa-brands fa-instagram",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "id":3,
+        "icon": "fa-brands fa-twitter",
+        "link": "https://www.twitter.com/"
+      }
+    ]
+  }
+  

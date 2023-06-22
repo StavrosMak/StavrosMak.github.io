@@ -1,0 +1,58 @@
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+/* container */
+.featuredCollectionsContainer {
+    font-family: 'Roboto', sans-serif;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    margin:auto;
+}
+.featuredCollections--List button.active{
+    border-bottom: 1px solid black;
+}
+
+
+.featuredCollections--Header {
+    border-bottom: 1px solid black;
+    margin-bottom: 2.5em;
+}
+
+.featuredCollections--List ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+}
+
+.featuredCollections--List ul li button {
+    background: transparent;
+    padding: .8em;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+ 
+.featuredCollections--List ul li button:hover {
+    color: #fff;
+    background-color: black;
+    transition: .2s ease-in;
+    border-bottom: 1px solid black;
+}
+
+.featured--productCardList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+

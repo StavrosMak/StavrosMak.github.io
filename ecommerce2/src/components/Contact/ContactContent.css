@@ -1,0 +1,123 @@
+.ContactContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('../../Images/contactPageBackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: cover;
+}
+
+.ContactContent {
+    background-color: #fff;
+    margin-top: 7em;
+    max-width: 1000px;
+    height: 550px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 1em;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: #fff;
+}
+
+.headerContactInfo {
+    align-self: center;
+    margin: 1em;
+}
+
+.infoItems {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 1em;
+    gap: 2em;
+}
+
+.contactInfo .social {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+}
+
+
+.contactInfo .social button {
+    color: white;
+    margin: 2em 0;
+    font-size: 1.3em;
+    align-self: flex-end;
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.contactUsHeader {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+.contactForm label {
+    width: 70%;
+}
+
+.contactForm input,
+textarea {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 70%;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.contactForm textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contactForm button {
+    background-color: black;
+    padding: 1em;
+    color: #fff;
+    border-radius: 20px;
+    width: 100px;   
+}
+
+@media screen and (max-width:768px){
+
+    .ContactContainer{
+        background-position:initial;
+        background-size: cover;
+    }
+
+    .ContactContent{
+        grid-template-columns: 1fr;
+        margin: 0.9em;
+    }
+
+    .contactInfo{
+        display: none;
+    }
+}

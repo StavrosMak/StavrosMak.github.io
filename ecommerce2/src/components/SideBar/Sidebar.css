@@ -1,0 +1,96 @@
+.sidebarContainer {
+    box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    display: flex;
+}
+
+.sidebarContent input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.sidebarContent input[type="checkbox"]:checked::before {
+    content: '\2714';
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: black;
+
+}
+
+.sidebarContent {
+    position: relative;
+    top: 20em;
+    width: 100%;
+    margin: 0 0.3em;
+}
+
+.sidebarContent h2 {
+    text-align: center;
+}
+
+.categoryItem {
+    margin: 1em 0;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.categoryItem input:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in;
+}
+
+.saveBtn {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+
+    .sidebarContainer {
+        z-index: 10;
+        height: 100vh;
+        top: -10px;
+        background-color: #fff;
+        width: 100vw;
+        position: fixed;
+        display: none;
+        text-align: center;
+        padding: 5em 0;
+    }
+
+    .categoryItem {
+        text-align: center;
+    }
+
+    .sidebarContainer.active {
+        display: block;
+    }
+
+    .saveBtn {
+        background-color: black;
+        color: #fff;
+        margin: 3em 0;
+        padding: 1em;
+        display: inline-block;
+    }
+
+    .sidebarContent {
+        background-color: #fff;
+        height: 100vh;
+        top: 4em;
+        width: 100%;
+        z-index: 2;
+    }
+
+
+}

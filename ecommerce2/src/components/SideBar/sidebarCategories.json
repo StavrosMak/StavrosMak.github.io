@@ -1,0 +1,17 @@
+[
+    {
+        "name": "jewelery",
+        "label": "jewelery",
+        "id":1
+    },
+    {
+        "name": "men's clothing",
+        "label": "men's clothing",
+        "id":2
+    },
+    {
+        "name": "women's clothing",
+        "label": "women's clothing",
+        "id":3
+    }
+]

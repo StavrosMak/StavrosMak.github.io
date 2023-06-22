@@ -1,0 +1,205 @@
+ button {
+     border: none;
+     outline: none;
+ }
+
+ :root {
+     --navbarItemsGap: 0.8em;
+
+ }
+
+ .Navbar {
+     position: fixed;
+     top: 0px;
+     z-index: 2;
+     background-color: white;
+     height: 7em;
+     /* font-family: "Roboto", sans-serif; */
+     width: 100%;
+     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .menu-icon {
+     display: none;
+ }
+
+ .NavbarItems {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     justify-self: center;
+     height: 100%;
+     width: 85%;
+     margin: auto;
+     font-size: 1.5rem;
+ }
+
+ .nav-links a {
+     padding: .2em;
+     color: #000000;
+
+ }
+
+ .NavbarSiteBrand img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+
+ .nav-menu {
+     /* style */
+     list-style: none;
+     font-size: 1.5rem;
+
+     /* display */
+     display: flex;
+
+     gap: var(--navbarItemsGap);
+     white-space: nowrap;
+
+ }
+
+ .nav-menu .nav-links {
+     position: relative;
+ }
+
+ .nav-menu .nav-links::before {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background-color: rgba(0, 0, 0, 0.4);
+     transition: width 0.2s ease-in-out;
+ }
+
+ .nav-menu li:hover::before {
+     width: 100%;
+ }
+
+ .Navbar .hidden {
+     display: none;
+ }
+
+
+ .signUpBtn {
+     padding: 0.5rem 1rem;
+     white-space: nowrap;
+     border-radius: 0.3em;
+     font-size: 1rem;
+     font-weight: 600;
+     display: none;
+     border: none;
+     cursor: pointer;
+     transition: 0.2s ease-in-out;
+ }
+
+ .signUpBtn:hover {
+     background-color: #151516;
+     color: #fff;
+ }
+
+ .nav-menu.active {
+     transition: 0.2s ease-in-out;
+
+     left: 0;
+     opacity: 1;
+     z-index: -1;
+ }
+
+ .mobile-actions {
+     display: none;
+ }
+
+ .NavbarActions {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.NavbarActions button {
+    display: flex;
+    font-size: 24px;
+}
+
+ .cartIconSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ .cartLength {
+    
+    min-width: 35px;
+    font-size:17px;
+    color: red;
+}
+
+ @media screen and (max-width:768px) {
+
+     .Navbar {
+         width: 100%;
+     }
+
+     .signUpBtn {
+         display: none-block;
+     }
+
+     .NavbarActions {
+         display: none;
+     }
+
+     .menu-icon {
+         display: block;
+         position: absolute;
+         right: 10%;
+     }
+
+     .NavbarItems {
+         width: 100%;
+         justify-content: space-between;
+     }
+
+     .nav-menu {
+         /* display & position */
+         flex-direction: column;
+         position: absolute;
+         overflow: auto;
+         top: 4em;
+         left: -100%;
+         align-items: center;
+         opacity: 0;
+
+         /* color * size */
+         background-color: #fff;
+         width: 100%;
+         min-height: 100vh;
+
+     }
+
+     .nav-links {
+         display: block;
+         font-size: 2rem;
+         padding: 0.5em 0;
+     }
+
+     .NavbarSiteBrand {
+         height: 100%;
+         width: 100px;
+     }
+
+     .Navbar .mobile-actions {
+         display: flex;
+         gap: 0.8em;
+         flex-direction: column;
+     }
+
+     .Navbar button {
+         padding: 0.4em;
+         font-size: 1.3em;
+     }
+
+ }

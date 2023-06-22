@@ -1,0 +1,174 @@
+.CartContainer {
+
+    /* position */
+    position: fixed;
+    top: 7em;
+    right: -500px;
+
+    height: 100%;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    /* colors */
+    background-color: #fff;
+    box-shadow: -1px 15px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+}
+
+.CartContainer::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+
+.CartContent {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: 30px repeat(auto-fill, 120px);
+    overflow-x: scroll;
+    padding: 0 .5em;
+    max-height: 80vh;
+
+}
+
+.totalCost {
+    /* display */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    /* styling */
+    background-color: black;
+    border-top: 1px solid black;
+    color: #fff;
+
+    /* width and height */
+    padding: 2em 0;
+    max-height: 200px;
+
+    /* self style */
+    position: absolute;
+    bottom: 7em;
+    width: 100%;
+}
+
+.totalCost button {
+    background-color: #fff;
+    color: black;
+    padding: 0.5em 1em;
+}
+
+.CartContainer.visible {
+    right: 0%;
+    opacity: 1;
+}
+
+.cardItem {
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    font-size: 0.8rem;
+}
+
+.closeCartBtn{
+    /* width: 16px; */
+    font-size: 18px;
+}
+
+
+.cartProductTitle {
+    overflow: hidden;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+
+.imageCartContainer {
+    width: 90px;
+    justify-self: flex-start;
+    height: 90px;
+
+}
+
+.imageCartContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.productCartInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 50%;
+
+}
+
+.quantityCartSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.quantityCartSection span {
+    padding: 0 1em;
+}
+
+.quantityCartSection button {
+    background-color: black;
+    margin: 0.5em;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+
+.closeCartSection {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:768px) {
+    .CartContainer {
+        top: 0px;
+        width: 100vw;
+        left: 0;
+        right: 0;
+        flex-wrap: wrap;
+    }
+
+    .cardItem{
+        max-width: 70vw;
+    }
+
+    .CartContent {
+        left: 0;
+        overflow-x:hidden ;
+        text-overflow: ellipsis;
+    }
+
+    .cartProductTitle{
+        max-height: 150px;
+        text-overflow: ellipsis;
+        padding-right: 2em;
+        width: 90vw;
+    }
+
+    .totalCost {
+        bottom: 0;
+    }
+}

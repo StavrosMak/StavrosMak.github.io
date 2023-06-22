@@ -1,0 +1,69 @@
+// import Navbar from './components/Navbar/Navbar';
+// import Footer from './components/Footer/Footer';
+// import { Route, Routes, useLocation } from "react-router-dom"
+// import Home from './Routes/Home';
+// import Products from './Routes/Products';
+// import About from './Routes/About';
+// import Cart from './components/Cart/Cart'
+// import React, { useState, useEffect, } from 'react'
+// import Contact from './Routes/Contact';
+// import { QueryClient, QueryClientProvider } from 'react-query';
+// import { ReactQueryDevtools } from 'react-query/devtools';
+
+// // Create a QueryClient instance
+// const queryClient = new QueryClient();
+
+// function App() {
+//   const location = useLocation();
+//   const { pathname } = useLocation();
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   const [cart, setCart] = useState([]);
+
+//   useEffect(() => {
+//     const cartData = localStorage.getItem("cart");
+//     if (cartData) {
+//       setCart(JSON.parse(cartData));
+//     }
+//   }, []);
+
+//   const updateCart = (updatedCart) => {
+//     setCart(updatedCart);
+//     setCartLength(updatedCart.reduce((total, item) => total + item.quantity, 0));
+//     localStorage.setItem("cart", JSON.stringify(updatedCart));
+//   };
+
+//   const [cartLength, setCartLength] = useState(0);
+
+  
+//   const [cartVisible, setCartVisible] = useState(false);
+//   const toggleCart = () => {
+//     setCartVisible(!cartVisible);
+//   }
+
+//   return (
+//     <div className="App">
+//       <QueryClientProvider client={queryClient}>
+//         <Navbar cartLength={cartLength} toggleCart={toggleCart} />
+//         <Routes location={location} key={location.path}>
+//           <Route path="/" element={<Home />} />
+//           <Route
+//             path="/products"
+//             element={<Products updateCart={updateCart} />}
+//           />
+//           <Route path="/about" element={<About />} />
+//           <Route path="/contact" element={<Contact />} />
+//         </Routes>
+//         {cartVisible && (
+//           <Cart cart={cart} updateCart={updateCart} toggleCart={toggleCart} />
+//         )}
+//         <Footer />
+//         <ReactQueryDevtools></ReactQueryDevtools>
+//       </QueryClientProvider>
+//     </div>
+//   );
+// }
+
+// export default App;
