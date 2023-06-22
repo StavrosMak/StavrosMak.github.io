@@ -79,7 +79,8 @@
      padding:0;
    }
   .moviePageContainer{
-    padding:0;
+    padding:.2em;
+   margin:auto;
   }
 
    .currentMovieRate {
