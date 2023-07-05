@@ -86,7 +86,7 @@ async function loadData(parentContainer, discoverURL) {
       movieCard.classList.add("movieCard");
 
       const img = document.createElement('img');
-      img.loading = "lazy"; // Set the loading attribute to "lazy" for lazy loading
+      //img.loading = "lazy"; // Set the loading attribute to "lazy" for lazy loading
       img.src = "../images/placeholder.png"; // Placeholder image source
 
       if (data.results[movie].poster_path) {
