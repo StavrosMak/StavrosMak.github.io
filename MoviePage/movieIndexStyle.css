@@ -66,22 +66,43 @@
    margin-bottom: 1em;
  }
 
+ .currentMovieInfoHeader {
+   margin: 1em 0;
+   width: max-content;
+   border-bottom: 4px solid rgba(2, 217, 255, 0.726);
+   ;
+ }
+
+ .currentMovieDuration,
+ .currentMovieLanguage,
+ .currentMovieGenre {
+   margin: 1em 0;
+ }
+
+ .infoData {
+   color: rgba(2, 217, 255, 0.726);
+ }
 
 
  @media screen and (max-width:768px) {
    .moviePageContent {
-     width: calc( 100% - 2.5em );
+     width: calc(100% - 2.5em);
      display: flex;
      flex-direction: column;
      align-items: center;
      text-align: center;
-     margin-left:2.8em;
-     padding:0;
+     margin-left: 2.8em;
+     padding: 0;
    }
-  .moviePageContainer{
-    padding:.2em;
-    
-  }
+
+   .moviePageContainer {
+     padding: .2em;
+
+   }
+
+   .currentMovieInfoHeader {
+     margin: 2em auto;
+   }
 
    .currentMovieRate {
      margin: 2em auto;
@@ -92,4 +113,5 @@
      text-align: center;
      margin: auto;
    }
+
  }
