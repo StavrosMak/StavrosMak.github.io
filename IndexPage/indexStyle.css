@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&family=Source+Sans+Pro:ital@1&display=swap");
-
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&family=Roboto:ital,wght@1,500&display=swap");
 
 /* !About Main */
 .mainContainer {
@@ -22,17 +19,19 @@
   overflow: hidden;
   min-height: 500px;
 }
-
 .banner {
+  height: 70vh;
   width: 100%;
-  max-height: 70vh;
-  min-height: 30em;
-  object-fit: cover;
   position: relative;
   overflow: hidden;
   border-bottom: 10px solid #181818;
 }
 
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .bannerInfo {
   /* display */
@@ -116,12 +115,8 @@
   }
 
   .banner {
-    background-color: #004672;
-    width: 100%;
-    height: 50vh;
-
+    max-height: 50vh;
   }
-
   .bannerInfo {
     font-size: 1rem;
     padding: 0 1em;
@@ -150,8 +145,7 @@
     white-space: normal;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* Number of lines to show */
+    -webkit-line-clamp: 3; /* Number of lines to show */
     -webkit-box-orient: vertical;
     padding: 0;
     margin: 0;
